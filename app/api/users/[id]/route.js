@@ -1,10 +1,10 @@
 import { NextResponse } from 'next/server'
-import prisma from '../../lib/prisma'
+import prisma from '../../../lib/prisma'
 
 // GET single user by ID
 export async function GET(request, { params }) {
   try {
-    const { id } = params
+    const { id } = await params
     const user = await prisma.user.findUnique({
       where: { id: parseInt(id) }
     })
@@ -28,7 +28,7 @@ export async function GET(request, { params }) {
 // PUT update user by ID
 export async function PUT(request, { params }) {
   try {
-    const { id } = params
+    const { id } = await params
     const body = await request.json()
     const { email, name, age } = body
 
@@ -65,7 +65,7 @@ export async function PUT(request, { params }) {
 // DELETE user by ID
 export async function DELETE(request, { params }) {
   try {
-    const { id } = params
+    const { id } = await params
     await prisma.user.delete({
       where: { id: parseInt(id) }
     })

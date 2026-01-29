@@ -140,7 +140,7 @@ export default function Home() {
 
         {/* Form */}
         <div className="bg-white shadow rounded-lg p-6 mb-8">
-          <h2 className="text-2xl font-semibold mb-4">
+          <h2 className="text-2xl font-semibold mb-4 text-black">
             {isEditing ? 'Edit User' : 'Add New User'}
           </h2>
           <form onSubmit={handleSubmit} className="space-y-4">
@@ -155,7 +155,7 @@ export default function Home() {
                 required
                 value={formData.email}
                 onChange={handleChange}
-                className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"
+                className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 text-black"
               />
             </div>
             <div>
@@ -168,7 +168,7 @@ export default function Home() {
                 name="name"
                 value={formData.name}
                 onChange={handleChange}
-                className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"
+                className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 text-black"
               />
             </div>
             <div>
@@ -181,7 +181,7 @@ export default function Home() {
                 name="age"
                 value={formData.age}
                 onChange={handleChange}
-                className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"
+                className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 text-black"
               />
             </div>
             <div className="flex gap-4">
@@ -207,7 +207,7 @@ export default function Home() {
         {/* Users Table */}
         <div className="bg-white shadow rounded-lg overflow-hidden">
           <div className="px-6 py-4 border-b border-gray-200">
-            <h2 className="text-2xl font-semibold">
+            <h2 className="text-2xl font-semibold text-black">
               Users ({users.length})
             </h2>
           </div>
